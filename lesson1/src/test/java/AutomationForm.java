@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class automationform {
+public class AutomationForm {
     @BeforeAll
     static void setup() {
         Configuration.baseUrl = "https://demoqa.com";
@@ -44,7 +44,7 @@ public class automationform {
         $("#currentAddress").setValue(currentAddress);
         $("#react-select-3-input").setValue(state).pressEnter();
         $("#react-select-4-input").setValue(city).pressEnter();
-        $("#submit").click();
+        $("#submit").scrollTo().click();
 
 
         $(".table-responsive").shouldHave(text(firstName + " " + lastName), text(userEmail),
