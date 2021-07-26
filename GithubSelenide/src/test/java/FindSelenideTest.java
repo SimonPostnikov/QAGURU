@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class FindSelenideTest {
 
     @Test
-    void SoftAssertionsTes() {
+    void softAssertionsTes() {
         open("https://github.com/selenide/selenide");
         $("#wiki-tab").$(byText("Wiki")).click();
         $(".js-wiki-more-pages-link").scrollTo().click();

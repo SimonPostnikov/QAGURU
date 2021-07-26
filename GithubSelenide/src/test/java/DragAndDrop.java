@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class DragAndDrop {
     @Test
-    void DragAndDrop() throws InterruptedException {
+    void dragAndDrop() throws InterruptedException {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDropTo($("#column-b"));
         $("#column-a").shouldHave(text("B"));
